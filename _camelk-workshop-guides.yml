@@ -9,20 +9,7 @@ vars:
   ROUTE_SUBDOMAIN:
   MASTER_URL:
   CONSOLE_URL:
-  ECLIPSE_CHE_URL:
-  KEYCLOAK_URL:
-  GIT_URL:
-  CHE_USER_NAME:
-  CHE_USER_PASSWORD:
-  OPENSHIFT_USER_NAME:
-  OPENSHIFT_USER_PASSWORD:
-  RHAMT_URL:
 
 modules:
   activate:
-  - workshop-environment
-  - getting-started-cloud-native
-  - decide-which-appserver
-  - migrate-to-jboss-eap
-  - break-monolith-apart1
-  - break-monolith-apart2
+  - camel-k-intro
