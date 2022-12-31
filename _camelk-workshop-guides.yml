@@ -1,8 +1,8 @@
-id: "cloudnative"
-name: "The Containers and Cloud-Native Roadshow Dev Track - Module 1"
+id: "camel-k"
+name: "Camel-K Workshop Guides"
 
 content:
-  url: https://raw.githubusercontent.com/RedHat-Middleware-Workshops/cloud-native-workshop-v2m1-guides.git/master
+  url: https://raw.githubusercontent.com/kamorisan/camelk-workshop-v1-guides.git/main
 
 vars:
   vars:
