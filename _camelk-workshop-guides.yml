@@ -13,3 +13,4 @@ vars:
 modules:
   activate:
   - camel-k-intro
+  - workshop-environment
