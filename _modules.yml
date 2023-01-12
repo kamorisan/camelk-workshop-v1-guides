@@ -6,7 +6,7 @@ modules:
     name: Camel Kについて
   workshop-environment:
     name: 利用環境について
-  timer:
+  timer-component:
     name: Timer について
   #getting-started-cloud-native:
   #  name: Getting Started with Cloud-Native Apps
