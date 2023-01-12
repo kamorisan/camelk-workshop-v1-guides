@@ -14,4 +14,4 @@ modules:
   activate:
   - camel-k-intro
   - workshop-environment
-  
+  - timer
