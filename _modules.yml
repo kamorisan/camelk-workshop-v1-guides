@@ -6,6 +6,8 @@ modules:
     name: Camel Kについて
   workshop-environment:
     name: 利用環境について
+  timer:
+    name: Timer
   #getting-started-cloud-native:
   #  name: Getting Started with Cloud-Native Apps
   #decide-which-appserver:
