@@ -8,6 +8,8 @@ modules:
     name: 利用環境について
   timer-component:
     name: Timer について
+  file-component:
+    name: File について
   #getting-started-cloud-native:
   #  name: Getting Started with Cloud-Native Apps
   #decide-which-appserver:

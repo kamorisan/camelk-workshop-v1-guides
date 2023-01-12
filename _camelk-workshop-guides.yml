@@ -15,3 +15,4 @@ modules:
   - camel-k-intro
   - workshop-environment
   - timer-component
+  - file-component
