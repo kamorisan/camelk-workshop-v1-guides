@@ -93,7 +93,7 @@ Hello World の文字列が、約1秒間隔に5回表示されることを確認
 以下のようなエラーが出ることがあります。
 
 <blockquote>
-<p>[jbang][ERROR] Script or alias could not be found or read: '.jbang.version=3.18.3'
+<p>[jbang][ERROR] Script or alias could not be found or read: '.jbang.version=3.18.3'<br>
 [jbang] Run with --verbose for more details</p>
 </blockquote>
 

@@ -120,11 +120,13 @@ Parameters 項目に、以下の内容を設定してください。
  * **Language**: simple ([simple](https://camel.apache.org/components/{{ CAMEL_VERSION }}/languages/simple-language.html) についての詳細はこちらを参照ください)
  * **Expression**: 
 
-```
-${body}
-
+<blockquote>
+<p>
+${body}<br>
 It's ${date:now:HH:mm:ss} now.
-```
+</p>
+</blockquote>
+
 
 ![](images/02-file-011.png)
 ![karavan]({% image_path 02-file-011.png %}){:width="800px"}
