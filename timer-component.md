@@ -90,6 +90,8 @@ Hello World の文字列が、約1秒間隔に5回表示されることを確認
 >
 > *`"-Dcamel.jbang.version=3.18.3"`* のように、ダブルクォーテーションを使う必要があります。
 
+a
+
 ![](images/01-timer-009.png)
 ![karavan]({% image_path 01-timer-009.png %}){:width="800px"}
 
