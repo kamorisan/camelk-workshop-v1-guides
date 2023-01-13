@@ -77,11 +77,11 @@ Hello World!
 `file.yaml` をもう一度開き、右上の **▷** の実行ボタンを押してください。
 （もしくは、左のエクスプローラでファイル名を右クリックして、`Karavan: Run File` を選択してください）
 
-![](images/02-file-007.png)
-![karavan]({% image_path 02-file-007.png %}){:width="800px"}
-
 ターミナルが開き、作成したインテグレーションが JBang を通して実行されます。
 特にエラーなく実行されたら、先ほど作成した `test.txt` を `data/input` フォルダに移動して格納をしてください。
+
+![](images/02-file-007.png)
+![karavan]({% image_path 02-file-007.png %}){:width="800px"}
 
 ファイルが所定のフォルダに格納されると、インテグレーションが実行されて、コンソールに Log が表示され、`data/output` にファイルが格納されます。
 （インプットのファイルは、`data/input` 配下に `.camel` フォルダが作成され、そちらに移動します）
@@ -112,7 +112,7 @@ Route の 出力側の File シンボルにマウスカーソルを持ってい�
 ![](images/02-file-010.png)
 ![karavan]({% image_path 02-file-010.png %}){:width="600px"}
 
-`Log` と `File` の間に、`Set Body` が追加されました。
+これで、`Log` と `File` の間に、`Set Body` が追加されました。
 
 `Set Body` のシンボルをクリックすると、右側にプロパティが表示されますので、
 Parameters 項目に、以下の内容を設定してください。
@@ -121,8 +121,9 @@ Parameters 項目に、以下の内容を設定してください。
  * **Expression**: 
 
 ```
-${body}
-It's ${date:now:HH:mm:ss} now.
+ ${body}
+ 
+ It's ${date:now:HH:mm:ss} now.
 ```
 
 ![](images/02-file-011.png)
