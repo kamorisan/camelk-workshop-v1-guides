@@ -92,15 +92,16 @@ Hello World の文字列が、約1秒間隔に5回表示されることを確認
 
 以下のようなエラーが出ることがあります。
 
-<blockquote>
-<p>[jbang][ERROR] Script or alias could not be found or read: '.jbang.version=3.18.3'<br>
+
+<code>
+<p>[jbang][ERROR] Script or alias could not be found or read: '.jbang.version=3.18.3' <br>
 [jbang] Run with --verbose for more details</p>
-</blockquote>
+</code>
 
 その場合は、ターミナルから、以下のコマンドを実行してみてください。
 
-<blockquote>
+<code>
 <p> > jbang "-Dcamel.jbang.version=3.18.3" camel@apache/camel run timer.yaml</p>
-</blockquote>
+</code>
 
 *`"-Dcamel.jbang.version=3.18.3"`* のように、ダブルクォーテーションを使う必要があります。
