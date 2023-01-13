@@ -3,7 +3,7 @@
 
 ### 1. 目的
 
-[Timer](https://camel.apache.org/components/3.18.x/timer-component.html) コンポーネントの内容を理解するとともに、Karavan Designer を使用した Camel K インテグレーション実装のイメージを把握することを目的とします。
+[Timer](https://camel.apache.org/components/{{ CAMEL_VERSION }}/timer-component.html) コンポーネントの内容を理解するとともに、Karavan Designer を使用した Camel K インテグレーション実装のイメージを把握することを目的とします。
 
 ### 2. Camel K インテグレーションの作成
 
@@ -90,9 +90,25 @@ Hello World の文字列が、約1秒間隔に5回表示されることを確認
 >
 > *`"-Dcamel.jbang.version=3.18.3"`* のように、ダブルクォーテーションを使う必要があります。
 
-a
-
 ![](images/01-timer-009.png)
 ![karavan]({% image_path 01-timer-009.png %}){:width="800px"}
 
 確認後、`Ctrl+C` もしくは、ターミナル右上のゴミ箱のアイコンをクリックして、終了してください。
+
+
+#### Window 環境で実行の場合
+
+以下のようなエラーが出ることがあります。
+
+```
+[jbang][ERROR] Script or alias could not be found or read: '.jbang.version=3.18.3'
+[jbang] Run with --verbose for more details
+```
+
+その場合は、ターミナルから、以下のコマンドを実行してみてください。
+
+```
+> jbang "-Dcamel.jbang.version=3.18.3" camel@apache/camel run timer.yaml
+```
+
+*`"-Dcamel.jbang.version=3.18.3"`* のように、ダブルクォーテーションを使う必要があります。

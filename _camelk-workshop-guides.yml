@@ -9,6 +9,7 @@ vars:
   ROUTE_SUBDOMAIN:
   MASTER_URL:
   CONSOLE_URL:
+  VERSION:
 
 modules:
   activate:
