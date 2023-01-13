@@ -42,6 +42,7 @@ Route の Timer シンボルをクリックすると、右側にプロパティ�
  <span style="color: red">赤い * (アスタリスク)</span>　が付いている項目は、入力が必須です。
 
 Parameters 項目に、以下の内容を設定してください。
+
  * **Timer Name**: Timer1
  * **Delay**: 1000 (初回実行までのディレイ、単位はms)
  * **Period**: 1000 (繰り返し実行の周期、単位はms)
