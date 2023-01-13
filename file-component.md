@@ -121,7 +121,8 @@ Parameters 項目に、以下の内容を設定してください。
  * **Expression**: 
 
 ```
-${body} <br>
+${body}
+
 It's ${date:now:HH:mm:ss} now.
 ```
 
