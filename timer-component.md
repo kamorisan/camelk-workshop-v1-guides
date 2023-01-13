@@ -1,5 +1,6 @@
 # Timer コンポーネント
 ---
+
 ## 1. 目的
 
 [Timer](https://camel.apache.org/components/3.18.x/timer-component.html) コンポーネントの内容を理解するとともに、Karavan Designer を使用した Camel K インテグレーション実装のイメージを把握することを目的とします。
@@ -11,6 +12,6 @@
 
 ![](images/01-timer-001.png)
 
-![karavan]({% image_path 01-timer-001.png %}){:width="600px"}
+![karavan]({% image_path 01-timer-001.png %}){:width="200px"}
 
 image::create_project.png[create_dialog, 700]
