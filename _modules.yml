@@ -7,9 +7,9 @@ modules:
   workshop-environment:
     name: 利用環境について
   timer-component:
-    name: Timer について
+    name: Timer コンポーネント
   file-component:
-    name: File について
+    name: File コンポーネント
   #getting-started-cloud-native:
   #  name: Getting Started with Cloud-Native Apps
   #decide-which-appserver:
