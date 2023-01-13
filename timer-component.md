@@ -11,9 +11,9 @@
 左のエクスプローラー上で、右クリックをして、メニューから `Karavan: Create Integration` を選択してください。
 
 ![](images/01-timer-001.png)
-![](images/01-timer-001.png)
+![karavan]({% image_path 01-timer-001.png %}){:width="400px"}
 
-![karavan]({% image_path 01-timer-001.png %}){:width="200px"}
-![karavan]({% image_path 01-timer-001.png %}){:width="600px"}
+次に、
 
-image::create_project.png[create_dialog, 700]
+![](images/01-timer-002.png)
+![karavan]({% image_path 01-timer-002.png %}){:width="400px"}
