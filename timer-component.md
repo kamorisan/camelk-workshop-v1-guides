@@ -85,7 +85,7 @@ Hello World の文字列が、約1秒間隔に5回表示されることを確認
 
 以下のようなエラーが出ることがあります。
 
-```java:title
+```
 
 [jbang][ERROR] Script or alias could not be found or read: '.jbang.version=3.18.3'
 
