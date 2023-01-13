@@ -5,7 +5,7 @@
 
 [Timer](https://camel.apache.org/components/{{ CAMEL_VERSION }}/timer-component.html) コンポーネントの内容を理解するとともに、Karavan Designer を使用した Camel K インテグレーション実装のイメージを把握することを目的とします。
 
-### 2. Camel K インテグレーションの作成
+### 2. Hello World の作成
 
 まず、任意のフォルダに VSCODE のワークスペースを作成します。
 
@@ -63,7 +63,13 @@ Timer に続く Step を定義することができます。
 
 `Log` のシンボルが Timer に続いて配置されます。
 
-Log プロパティ の `Message` に `Hello World` と入力をしてください。
+Log プロパティ の `Message` に 
+
+```
+Hello World! It's ${date:now:HH:mm:ss} now.
+```
+
+と入力をしてください。`${date:now:HH:mm:ss}` は、現在の時刻を HH:mm:ss の形式で表示します。
 
 それでは、実際に動かしてみます。
 右上の **▷** の実行ボタンを押してください。
