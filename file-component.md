@@ -121,9 +121,9 @@ Parameters 項目に、以下の内容を設定してください。
  * **Expression**: 
 
 ```
- ${body}
- 
- It's ${date:now:HH:mm:ss} now.
+${body}
+
+It's ${date:now:HH:mm:ss} now.
 ```
 
 ![](images/02-file-011.png)
