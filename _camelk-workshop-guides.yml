@@ -17,3 +17,4 @@ modules:
   - workshop-environment
   - timer-component
   - file-component
+  - data-formats

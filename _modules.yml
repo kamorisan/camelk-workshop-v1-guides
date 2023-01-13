@@ -10,6 +10,8 @@ modules:
     name: Timer コンポーネント
   file-component:
     name: File コンポーネント
+  data-formats:
+    name: Data Formats パターン
   #getting-started-cloud-native:
   #  name: Getting Started with Cloud-Native Apps
   #decide-which-appserver:
