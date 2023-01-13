@@ -120,12 +120,10 @@ Parameters 項目に、以下の内容を設定してください。
  * **Language**: simple ([simple](https://camel.apache.org/components/{{ CAMEL_VERSION }}/languages/simple-language.html) についての詳細はこちらを参照ください)
  * **Expression**: 
 
-<blockquote>
-<p>
-${body}<br>
-It's ${date:now:HH:mm:ss} now.
-</p>
-</blockquote>
+><pre>
+> ${body}
+> It's ${date:now:HH:mm:ss} now.
+></pre>
 
 
 ![](images/02-file-011.png)
