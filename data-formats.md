@@ -29,3 +29,19 @@ Parameters は、以下を入力してください。
 
 > 前章の [Fileコンポーネント]({{ HOSTNAME_SUFFIX }}/workshop/camel-k/lab/file-component) で `data/input` フォルダを作成していない場合は、フォルダを作成してください。
 
+![](images/03-dataformat-002.png)
+![karavan]({% image_path 03-dataformat-002.png %}){:width="800px"}
+
+最後に、テスト用のCSVファイルを作成します。
+左のエクスプローラー上で、右クリックをして、メニューから `新しいファイル` を選択し、`test.csv` を作成します。
+
+ファイルの中身は、
+
+```
+id, name
+1, apple
+2, orange
+3, lemon
+```
+
+としてください。
