@@ -3,7 +3,12 @@
 
 ### 1. 目的
 
-[DataFormat](https://camel.apache.org/components/{{ CAMEL_VERSION }}/dataformats/index.html) を使用して、Camel K のデータ変換機能の使用方法を理解する事を目的とします。
+[Marshal](https://camel.apache.org/components/{{ CAMEL_VERSION }}/eips/marshal-eip.html) と [Unmarshal](https://camel.apache.org/components/{{ CAMEL_VERSION }}/eips/unmarshal-eip.html#) を使用して、Camel K のデータ変換機能の使用方法を理解する事を目的とします。
+
+* **Marshal** - Message の Body の Javaオブジェクト等をバイナリやテキスト形式に変換します。
+* **Unmarshal** - Message の Body の バイナリやテキスト形式のデータをJavaオブジェクトに変換します。
+
+Apache Camel が提供する Data Format については[こちら](https://camel.apache.org/components/{{ CAMEL_VERSION }}/dataformats/index.html)を参照してください。
 
 ### 2. CSVファイルをJSON形式に変換する
 
@@ -45,3 +50,28 @@ id, name
 ```
 
 としてください。
+
+![](images/03-dataformat-003.png)
+![karavan]({% image_path 03-dataformat-003.png %}){:width="400px"}
+
+では、取得するファイルの中身を変換していきます。
+まず、オブジェクトに変換するために、`Unmarshal` を使用します。
+
+Route にマウスカーソルを持っていくと、File シンボルの下に小さな＋ボタンが現れますので、それをクリックし、`Transformation` のタブから `Unmarshal` を探して選択をしてください。
+
+![](images/03-dataformat-004.png)
+![karavan]({% image_path 03-dataformat-004.png %}){:width="600px"}
+
+`Unmarshal` のシンボルが File に続いて配置されます。
+
+Parameters は、以下のように設定をしてください。
+他の項目は、デフォルトのままで構いません。
+
+* Data Format: csv
+* Delimiter: , (カンマ)
+* Use Maps: True
+
+![](images/03-dataformat-005.png)
+![karavan]({% image_path 03-dataformat-005.png %}){:width="800px"}
+![](images/03-dataformat-006.png)
+![karavan]({% image_path 03-dataformat-006.png %}){:width="800px"}
