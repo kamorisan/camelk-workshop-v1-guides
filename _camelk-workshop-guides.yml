@@ -18,3 +18,4 @@ modules:
   - timer-component
   - file-component
   - data-formats
+  - split-eip

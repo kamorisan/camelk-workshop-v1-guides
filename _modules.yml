@@ -12,6 +12,8 @@ modules:
     name: File コンポーネント
   data-formats:
     name: Data Formats パターン
+  split-eip:
+    name: Split パターン
   #getting-started-cloud-native:
   #  name: Getting Started with Cloud-Native Apps
   #decide-which-appserver:
