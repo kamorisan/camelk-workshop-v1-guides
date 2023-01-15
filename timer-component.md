@@ -54,7 +54,7 @@ Parameters 項目に、以下の内容を設定してください。
 ![karavan]({% image_path 01-timer-006.png %}){:width="800px"}
 
 Timer に続く Step を定義することができます。
-ここでは、コンソールに `Hello World` のログを表示させてみます。
+ここでは、コンソールに `Hello World` の Log を表示させてみます。
 
 `Routing` のタブから `Log` を探してクリックをしてください。
 

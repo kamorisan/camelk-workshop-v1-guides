@@ -13,11 +13,11 @@ Apache Camel が提供する Data Format については[こちら](https://came
 ### 2. CSVファイルを Unmarshal でJavaオブジェクトに変換する
 
 VSCODE 左のエクスプローラー上で、右クリックをして、メニューから `Karavan: Create Integration` を選択し、任意のファイル名で空のインテグレーションを作成をしてください。
-（ここでは、dataFormat というファイル名にしておきます。）
+（ここでは、dataformats というファイル名にしておきます。）
 
 まず、CSVファイルを取得する処理を作成します。
 
-`dataFormat.yaml` の Karavan Designer のGUIを開き、上部の `Create new route` をクリックして、Route を作成しましょう。
+`dataformats.yaml` の Karavan Designer のGUIを開き、上部の `Create new route` をクリックして、Route を作成しましょう。
 
 `components` タブから `File` を探して選択をしてください。
 右上のテキストボックスに `File` と入力をすると、絞り込みができます。
@@ -43,10 +43,10 @@ Parameters は、以下を入力してください。
 ファイルの中身は、
 
 <pre>
-id,name<br>
-1,apple<br>
-2,orange<br>
-3,lemon<br>
+  id,name<
+  1,apple
+  2,orange
+  3,lemon
 </pre>
 
 としてください。
@@ -125,6 +125,7 @@ Log シンボルにマウスカーソルを持っていくと、左上に小さ�
 
 `Marshal` のシンボルをクリックすると、右側にプロパティが表示されますので、
 Parameters 項目に、以下の内容を設定してください。
+他の項目は、デフォルトのままで構いません。
 
 * **Data Format**: json
 * **Library**: jackson
