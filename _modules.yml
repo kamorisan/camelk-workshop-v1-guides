@@ -15,11 +15,11 @@ modules:
   split-eip:
     name: Split パターン
   direct-component:
-    name:
+    name: Direct コンポーネント
   recipientlist-eip:
-    name:
+    name: Recipient List パターン
   wiretap-eip:
-    name:
+    name: Wire Tap パターン
   #getting-started-cloud-native:
   #  name: Getting Started with Cloud-Native Apps
   #decide-which-appserver:
