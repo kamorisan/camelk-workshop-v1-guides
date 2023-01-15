@@ -43,10 +43,10 @@ Parameters は、以下を入力してください。
 ファイルの中身は、
 
 ```
-id, name
-1, apple
-2, orange
-3, lemon
+id,name
+1,apple
+2,orange
+3,lemon
 ```
 
 としてください。
@@ -75,3 +75,5 @@ Parameters は、以下のように設定をしてください。
 ![karavan]({% image_path 03-dataformat-005.png %}){:width="800px"}
 ![](images/03-dataformat-006.png)
 ![karavan]({% image_path 03-dataformat-006.png %}){:width="800px"}
+
+次に、
