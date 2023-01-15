@@ -19,4 +19,6 @@ modules:
   - file-component
   - data-formats
   - split-eip
-  
+  - direct-component
+  - recipientlist-eip
+  - wiretap-eip

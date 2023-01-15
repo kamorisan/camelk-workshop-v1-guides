@@ -14,6 +14,12 @@ modules:
     name: Data Formats パターン
   split-eip:
     name: Split パターン
+  direct-component:
+    name:
+  recipientlist-eip:
+    name:
+  wiretap-eip:
+    name:
   #getting-started-cloud-native:
   #  name: Getting Started with Cloud-Native Apps
   #decide-which-appserver:
