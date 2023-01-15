@@ -5,7 +5,7 @@
 
 [Marshal](https://camel.apache.org/components/{{ CAMEL_VERSION }}/eips/marshal-eip.html) と [Unmarshal](https://camel.apache.org/components/{{ CAMEL_VERSION }}/eips/unmarshal-eip.html#) を使用して、Camel K のデータ変換機能の使用方法を理解する事を目的とします。
 
-* **Marshal** - Message の Body の Javaオブジェクト等をバイナリやテキスト形式に変換します。
+* **Marshal** - Message の Body の Javaオブジェクトをバイナリやテキスト形式に変換します。
 * **Unmarshal** - Message の Body の バイナリやテキスト形式のデータをJavaオブジェクトに変換します。
 
 Apache Camel が提供する Data Format については[こちら](https://camel.apache.org/components/{{ CAMEL_VERSION }}/dataformats/index.html)を参照してください。
@@ -13,11 +13,11 @@ Apache Camel が提供する Data Format については[こちら](https://came
 ### 2. CSVファイルを Unmarshal でJavaオブジェクトに変換する
 
 VSCODE 左のエクスプローラー上で、右クリックをして、メニューから `Karavan: Create Integration` を選択し、任意のファイル名で空のインテグレーションを作成をしてください。
-（ここでは、DataFormat というファイル名にしておきます。）
+（ここでは、dataFormat というファイル名にしておきます。）
 
 まず、CSVファイルを取得する処理を作成します。
 
-`DataFormat.yaml` の Karavan Designer のGUIを開き、上部の `Create new route` をクリックして、Route を作成しましょう。
+`dataFormat.yaml` の Karavan Designer のGUIを開き、上部の `Create new route` をクリックして、Route を作成しましょう。
 
 `components` タブから `File` を探して選択をしてください。
 右上のテキストボックスに `File` と入力をすると、絞り込みができます。
@@ -32,7 +32,7 @@ Parameters は、以下を入力してください。
 
 * **Directory Name**: data/input
 
-> 前章の [Fileコンポーネント]({{ HOSTNAME_SUFFIX }}/workshop/camel-k/lab/file-component) で `data/input` フォルダを作成していない場合は、フォルダを作成してください。
+> 前章の [Fileコンポーネント]({{ HOSTNAME_SUFFIX }}/workshop/camel-k/lab/file-component) で `data/input` フォルダを作成していない場合は、ワークスペースのルートフォルダ直下に、`data` フォルダを作成し、さらにdata フォルダの配下に、`input` フォルダを作成してください。
 
 ![](images/03-dataformat-002.png)
 ![karavan]({% image_path 03-dataformat-002.png %}){:width="800px"}
@@ -42,17 +42,17 @@ Parameters は、以下を入力してください。
 
 ファイルの中身は、
 
-```
-id,name
-1,apple
-2,orange
-3,lemon
-```
+<pre>
+id,name<br>
+1,apple<br>
+2,orange<br>
+3,lemon<br>
+</pre>
 
 としてください。
 
 ![](images/03-dataformat-003.png)
-![karavan]({% image_path 03-dataformat-003.png %}){:width="400px"}
+![karavan]({% image_path 03-dataformat-003.png %}){:width="600px"}
 
 では、取得するファイルの中身を変換していきます。
 まず、オブジェクトに変換するために、`Unmarshal` を使用します。
@@ -102,7 +102,7 @@ Unmarshalで変換した内容を表示するには、Log プロパティ の `M
 CSV Data Format で Unmarshal したデータは、JavaのList型になります。
 
 ![](images/03-dataformat-009.png)
-![karavan]({% image_path 03-dataformat-009.png %}){:width="600px"}
+![karavan]({% image_path 03-dataformat-009.png %}){:width="800px"}
 
 Log の確認ができたら、処理を停止してください。
 
@@ -144,6 +144,6 @@ Parameters 項目に、以下の内容を設定してください。
 JSON Data Format で Marshal したデータは、JSON形式のテキストになります。
 
 ![](images/03-dataformat-013.png)
-![karavan]({% image_path 03-dataformat13.png %}){:width="600px"}
+![karavan]({% image_path 03-dataformat13.png %}){:width="800px"}
 
 Log の確認ができたら、処理を停止してください。
