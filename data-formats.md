@@ -144,6 +144,6 @@ Parameters 項目に、以下の内容を設定してください。
 JSON Data Format で Marshal したデータは、JSON形式のテキストになります。
 
 ![](images/03-dataformat-013.png)
-![karavan]({% image_path 03-dataformat13.png %}){:width="800px"}
+![karavan]({% image_path 03-dataformat-013.png %}){:width="800px"}
 
 Log の確認ができたら、処理を停止してください。
