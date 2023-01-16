@@ -21,4 +21,4 @@ modules:
   - split-eip
   - direct-component
   - recipientlist-eip
-  - wiretap-eip
+  - kafka

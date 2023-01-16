@@ -18,8 +18,8 @@ modules:
     name: Direct コンポーネント
   recipientlist-eip:
     name: Recipient List パターン
-  wiretap-eip:
-    name: Wire Tap パターン
+  kafka:
+    name: Kafka との連携
   #getting-started-cloud-native:
   #  name: Getting Started with Cloud-Native Apps
   #decide-which-appserver:
