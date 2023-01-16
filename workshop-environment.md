@@ -1,6 +1,8 @@
 ## 利用環境 について
 ---
 
+### 事前準備
+
 このワークショップでは、ローカル環境で 簡単な Camel K インテグレーションを作成し、動作を確認すると共に、Karavan Designer を使用した 実装のイメージを把握していただきます。
 
 事前準備として、下記をローカル環境にインストールしてください。
@@ -19,7 +21,7 @@
 VSCODE のダウンロードについては 下記の URL へアクセスをして、右上の `Download` のリンクをクリックして、対応するOSを選択して実施をしてください。
 （ここでは、インストールの詳細については割愛します）
 
-* https://code.visualstudio.com/
+* [https://code.visualstudio.com/]
 
 ### Karavan Designer
 
@@ -43,7 +45,7 @@ code .
 ![](images/we-karavan-install.png)
 ![karavan]({% image_path we-karavan-install.png %}){:width="800px"}
 
-左端のメニューの一番上のエクスプローラをクリックし、エクスプローラ上で右クリックを押し￥、karavan のメニューが表示される様になればOKです。
+左端のメニューの一番上のエクスプローラをクリックし、エクスプローラ上で右クリックをして、karavan のメニューが表示される様になればOKです。
 
 ![](images/we-karavan-menu.png)
 ![karavan]({% image_path we-karavan-menu.png %}){:width="600px"}
@@ -58,4 +60,4 @@ code .
 JBang のインストールについては、下記のリンクを参考にしてください。
 （ここでは、インストールの詳細については割愛します）
 
-* https://www.jbang.dev/documentation/guide/latest/installation.html
+* [https://www.jbang.dev/documentation/guide/latest/installation.html]
