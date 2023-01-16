@@ -46,7 +46,7 @@ Direct プロパティ の `Name` に、`secoundRoute` と入力をしてくだ�
 ![](images/05-direct-004.png)
 ![karavan]({% image_path 05-direct-004.png %}){:width="800px"}
 
-scoundRoute が作成されて、source に Direct コンポーネントが配置されます。
+scoundRoute が作成されて、source として Direct コンポーネントが配置されます。
 
 ![](images/05-direct-005.png)
 ![karavan]({% image_path 05-direct-005.png %}){:width="800px"}
@@ -67,6 +67,7 @@ Log の Messege は、`scoundRoute invoked` と入力をしておきます。
 
 ターミナルが開き、作成したインテグレーションが JBang を通して実行されます。
 特にエラーなく実行されたら、ターミナルの Log を確認してください。
+`scoundRoute invoked` の文字列が表示されていれば、OKです。 
 
 ![](images/05-direct-007.png)
 ![karavan]({% image_path 05-direct-007.png %}){:width="800px"}
