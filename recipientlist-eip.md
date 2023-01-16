@@ -40,7 +40,7 @@ Parameters は、以下のように設定をします。
 他の項目は、デフォルトのままで構いません。
 
 * **Language**: simple
-* **Expression**: ${body(AsString)}
+* **Expression**: ${bodyAs(String)}
 * **Delimiter**: ; (セミコロン)
 
 ![](images/06-recipientlist-003.png)
@@ -48,7 +48,7 @@ Parameters は、以下のように設定をします。
 
 次に、分岐先の Route を定義していきます。
 
-`+ Create New Route` をクリックしてください。
+`+ Create new route` をクリックしてください。
 source は、`components` タブから `Direct` を探して選択をしてください。
 右上のテキストボックスに `Direct` と入力をすると、絞り込みができます。
 
@@ -79,7 +79,7 @@ Log の Messege は、`direct:a invoked` と入力をしておきます。
 ![](images/06-recipientlist-007.png)
 ![karavan]({% image_path 06-recipientlist-007.png %}){:width="800px"}
 
-同様にして、`+ Create New Route` をクリックし、`drect:b`、`direct:c` の Route を作成します。
+同様にして、`+ Create new route` をクリックし、`drect:b`、`direct:c` の Route を作成します。
 Log を表示するのも忘れずに追加してください。
 
 ![](images/06-recipientlist-008.png)
@@ -87,7 +87,6 @@ Log を表示するのも忘れずに追加してください。
 
 最後に、テスト用のテキストファイルを作成します。
 左のエクスプローラー上で、右クリックをして、メニューから `新しいファイル` を選択し、`recipient.txt` を作成します。
-
 ファイルの中身は、
 
 ```
