@@ -3,7 +3,7 @@
 
 ### 1. 目的
 
-[File](https://camel.apache.org/components/{{ CAMEL_VERSION }}/file-component.html) コンポーネントの内容を理解します。
+[File](https://camel.apache.org/components/{{ CAMEL_VERSION }}/file-component.html) コンポーネントを使用して、ファイルを他の Camel コンポーネントで処理したり、他のコンポーネントからのメッセージをファイルに出力する方法について理解します。
 
 ### 2. ファイルの取得・出力を行う
 
