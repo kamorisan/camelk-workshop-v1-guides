@@ -11,6 +11,7 @@ vars:
   CONSOLE_URL:
   CAMEL_VERSION:
   KAMELETS_VERSION:
+  POSTGRESQL_SERVER:
 
 modules:
   activate:
