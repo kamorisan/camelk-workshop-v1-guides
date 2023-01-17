@@ -24,4 +24,5 @@ modules:
   - direct-component
   - recipientlist-eip
   - kafka
+  - postgresql-sink
   

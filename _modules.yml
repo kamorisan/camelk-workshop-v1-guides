@@ -20,6 +20,8 @@ modules:
     name: Recipient List パターン
   kafka:
     name: Kafka との連携
+  postgresql-sink:
+    name: PostgreSQL との連携
   #getting-started-cloud-native:
   #  name: Getting Started with Cloud-Native Apps
   #decide-which-appserver:
