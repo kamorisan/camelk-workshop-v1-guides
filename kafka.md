@@ -46,10 +46,12 @@ Create a Kafka instance のページに移動するので、`Name` に任意の�
 インスタンスの Status が `Ready` になったら、右側の３点のアイコンから、`Detail` を選択してください。
 
 ![](images/07-kafka-005.png)
+![karavan]({% image_path 07-kafka-005.png %}){:width="800px"}
 
 作成したインスタンスの詳細が表示されますので、`Connection` タブをクリックして、`Bootstrap server` の内容をメモしておきます。
 
 ![](images/07-kafka-006.png)
+![karavan]({% image_path 07-kafka-006.png %}){:width="800px"}
 
 #### 2.2 RHOSAK で Kafka インスタンスに接続するための Service Account を作成する
 
@@ -60,10 +62,12 @@ Create a Kafka instance のページに移動するので、`Name` に任意の�
 任意のアカウント名を入力して、`[Create]` を選択します。
 
 ![](images/07-kafka-007.png)
+![karavan]({% image_path 07-kafka-007.png %}){:width="800px"}
 
 作成した Service Account の ID と Secret が表示されますので、メモをしてから閉じてください。
 
 ![](images/07-kafka-008.png)
+![karavan]({% image_path 07-kafka-008.png %}){:width="800px"}
 
 #### 2.3 RHOSAK で Service Account の権限を変更する
 
@@ -72,36 +76,44 @@ Kafka インスタンスに接続するための Service Account を作成した
 左側メニューから `Kafka Instances` を選択し、先ほど作成したインスタンスの名前をクリックします。
 
 ![](images/07-kafka-009.png)
+![karavan]({% image_path 07-kafka-009.png %}){:width="800px"}
 
 `Access` タブを選択し、`[Manage Access]` を選択します。
 
 ![](images/07-kafka-010.png)
+![karavan]({% image_path 07-kafka-010.png %}){:width="800px"}
 
 ポップアップ画面が開いたら、ドロップダウンのメニューから `All accounts` をクリックします。
 
 ![](images/07-kafka-011.png)
+![karavan]({% image_path 07-kafka-011.png %}){:width="800px"}
 
 次に、`Add permissions` のドロップダウンのメニューから、`Consume from a topic` を選択してください。
 
 ![](images/07-kafka-012.png)
+![karavan]({% image_path 07-kafka-012.png %}){:width="800px"}
 
 `Topic` と `Consumer group` の権限について、左の欄は `is`、 右の欄に `* (アスタリスク)` を入力します。 
 
 ![](images/07-kafka-013.png)
+![karavan]({% image_path 07-kafka-013.png %}){:width="800px"}
 
 さらに、`Add permissions` のドロップダウンのメニューから、今度は `Produce to a topic` を選択します。
 
 ![](images/07-kafka-014.png)
+![karavan]({% image_path 07-kafka-014.png %}){:width="800px"}
 
 `Topic` の権限について、左の欄は `is`、 右の欄に `* (アスタリスク)` を入力します。 
 
 最後に、`[Save]` を選択してください。
 
 ![](images/07-kafka-015.png)
+![karavan]({% image_path 07-kafka-015.png %}){:width="800px"}
 
 これで、アプリケーションやサービスからトピックにアクセスする準備ができました。
 
 ![](images/07-kafka-016.png)
+![karavan]({% image_path 07-kafka-016.png %}){:width="800px"}
 
 #### 2.4 RHOSAK で Kafka トピック を作成する
 
@@ -110,16 +122,19 @@ Kafka インスタンスと Service Account を作成したら、Kafka トピッ
 作成した kafka インスタンス の `Topic` タブを選択し、`[Create topic]` を選択します。
 
 ![](images/07-kafka-017.png)
+![karavan]({% image_path 07-kafka-017.png %}){:width="800px"}
 
 ガイドの手順に従って、トピックの詳細を定義していきます。
 任意のトピック名を入力し、`Next` を選択してください。
 
 ![](images/07-kafka-018.png)
+![karavan]({% image_path 07-kafka-018.png %}){:width="800px"}
 
 他の項目は一旦そのままで良いので、`Next` を選択し、最後に `Finish` を選択してください。
 トピックの設定が完了すると、新しい Kafka トピックが一覧に表示されます。
 
 ![](images/07-kafka-019.png)
+![karavan]({% image_path 07-kafka-019.png %}){:width="800px"}
 
 ### 3. Kafka Sink を使用して、Kafka トピックにメッセージを送信する
 
@@ -134,7 +149,7 @@ VSCODE に戻り、左のエクスプローラー上で、右クリックをし�
 右上のテキストボックスに `File` と入力をすると、絞り込みができます。
 
 ![](images/07-kafka-020.png)
-![karavan]({% image_path 07-kafka-007.png %}){:width="600px"}
+![karavan]({% image_path 07-kafka-020.png %}){:width="600px"}
 
 Route の source として、File コンポーネントが配置されます。
 Route の File シンボルをクリックすると、右側にプロパティが表示されますので、確認してください。
@@ -146,7 +161,7 @@ Parameters は、以下を入力してください。
 > 前章の [Fileコンポーネント]({{ HOSTNAME_SUFFIX }}/workshop/camel-k/lab/file-component) で `data/input` フォルダを作成していない場合は、ワークスペースのルートフォルダ直下に、`data` フォルダを作成し、さらにdata フォルダの配下に、`input` フォルダを作成してください。
 
 ![](images/07-kafka-021.png)
-![karavan]({% image_path 03-dataformat-002.png %}){:width="800px"}
+![karavan]({% image_path 07-kafka-021.png %}){:width="800px"}
 
 最後に、テスト用のCSVファイルを作成します。
 左のエクスプローラー上で、右クリックをして、メニューから `新しいファイル` を選択し、`kafka-test.txt` を作成します。
