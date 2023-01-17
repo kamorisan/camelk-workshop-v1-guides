@@ -43,7 +43,7 @@ Parameters は、以下を入力してください。
 ファイルの中身は、
 
 <pre>
-  id,name<
+  id,name
   1,apple
   2,orange
   3,lemon

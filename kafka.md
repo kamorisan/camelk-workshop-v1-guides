@@ -10,7 +10,7 @@ Kamelet の **Kafka Sink**, **Kafka Source** を使用して、Camel K と Kafka
 
 ### 2. Red Hat OpenShift Streams for Apache Kafka　(RHOSAK) の準備
 
-このワークショップでは、Red Hat が提供するマネージド kafka の　サービスである、Red Hat OpenShift Streams for Apache Kafka (略してRHOSAK) を使用していきます。
+この章では、Red Hat が提供するマネージド kafka のサービスである、Red Hat OpenShift Streams for Apache Kafka (略してRHOSAK) を使用していきます。
 RHOSAK を使用すると、Kafkaの環境を自分で構築・運用することなく、ストリーム処理のアプリケーションの開発やリリースを簡単に行うことができるようになります。
 なお、2023年1月現在、RHOSAKは48時間有効の、無料のトライアル版を使用することができます。
 
@@ -57,7 +57,7 @@ Create a Kafka instance のページに移動するので、`Name` に任意の�
 
 アプリケーションまたはサービスを RHOSAK の Kafka インスタンスに接続するには、Service Account を作成する必要があります。
 
-先ほどの Kafka インスタンス詳細ページの、Bootstrap server の下に、`[Create service account]` があるので、クリックして選択してください。
+先ほどの Kafka インスタンス詳細ページの、Bootstrap server の下に、`[Create service account]` があるので、クリックして選択してください。もしくは、左側のメニューから `Service Accounts` -> `[Create service account]` でもOKです。
 
 任意のアカウント名を入力して、`[Create]` を選択します。
 
@@ -65,6 +65,11 @@ Create a Kafka instance のページに移動するので、`Name` に任意の�
 ![karavan]({% image_path 07-kafka-007.png %}){:width="800px"}
 
 作成した Service Account の ID と Secret が表示されますので、メモをしてから閉じてください。
+
+<pre>
+（※注）
+生成された資格情報は1回だけ表示されるため、資格情報のウィンドウを閉じる前に、コピーした資格情報が正常かつ安全に保存されていることを確認してください。
+</pre>
 
 ![](images/07-kafka-008.png)
 ![karavan]({% image_path 07-kafka-008.png %}){:width="800px"}
@@ -130,6 +135,11 @@ Kafka インスタンスと Service Account を作成したら、Kafka トピッ
 ![](images/07-kafka-018.png)
 ![karavan]({% image_path 07-kafka-018.png %}){:width="800px"}
 
+* **Topic name**: 任意のトピック名を入力します。
+* **Partitions**: このトピックのパーティション数を設定します。パーティションは、トピック内のメッセージの個別のリストで、トピックの一部をクラスター内の複数のブローカーに分散させることができます。トピックには1つまたは複数のパーティションを含めることができ、プロデューサーとコンシューマーの負荷をスケーリングできます。
+* **Message retention**: メッセージの保存期間とサイズを適切な値に設定します。既定の保持時間は `A Week` 、保持サイズは `Unlimited` に設定されています。メッセージ保持時間は、クリーンアップポリシーに応じて、削除または圧縮される前にトピックに保持されている期間です。保持サイズとは、パーティション内のすべてのログセグメントが削除または圧縮されるまでの最大合計サイズです。
+* **Replicas**: RHOSAK の本リリースでは、レプリカは事前に設定されています。1つのブローカーのみで構成されるトライアル版のKafkaインスタンスでは、トピックのパーティションレプリカの数と、パーティションリーダーと同期する必要があるフォロワーレプリカの最小数が1に設定されています。レプリカは、トピック内のパーティションのコピーです。パーティション・レプリカは、クラスター内の複数のブローカーに分散され、ブローカーに障害が発生した場合にトピックの可用性を確保します。フォロワーレプリカがパーティションリーダーと同期している場合、フォロワーレプリカは必要に応じて新しいパーティションリーダーになることができます。
+
 他の項目は一旦そのままで良いので、`Next` を選択し、最後に `Finish` を選択してください。
 トピックの設定が完了すると、新しい Kafka トピックが一覧に表示されます。
 
@@ -140,35 +150,80 @@ Kafka インスタンスと Service Account を作成したら、Kafka トピッ
 
 少し長くなりましたが、RHOSAK で Kafka を使用する準備ができましたので、まずは Kafka にメッセージを送信する処理を作成していきます。
 
-VSCODE に戻り、左のエクスプローラー上で、右クリックをして、メニューから `Karavan: Create Integration` を選択し、任意のファイル名で空のインテグレーションを作成をしてください。
-（ここでは、kafka-produce というファイル名にしておきます。）
+ここでは、[Split パターン]({{ HOSTNAME_SUFFIX }}/workshop/camel-k/lab/file-component)で作成したインテグレーションに、Kafkaトピックへのメッセージの送信処理を追加していきます。
+まだ [Split パターン]({{ HOSTNAME_SUFFIX }}/workshop/camel-k/lab/file-component) を実施していない場合は、そちらを先に実施してください。
 
-次に `Create new route` をクリックして、Route を作成しましょう。
-
-`components` タブから `File` を探して選択をしてください。
-右上のテキストボックスに `File` と入力をすると、絞り込みができます。
+VSCODE に戻り、左のエクスプローラー上で、`split.yam` を複製し、任意のファイル名に変更してください。（ここでは、kafka-sink.yaml としておきます）
 
 ![](images/07-kafka-020.png)
-![karavan]({% image_path 07-kafka-020.png %}){:width="600px"}
+![karavan]({% image_path 07-kafka-020.png %}){:width="800px"}
 
-Route の source として、File コンポーネントが配置されます。
-Route の File シンボルをクリックすると、右側にプロパティが表示されますので、確認してください。
+それでは、Kafka トピックにメッセージを送信する処理を追加ていきます。
+Log シンボルにマウスカーソルを持っていくと、左上に小さく `→` ボタンが表示されますので、クリックします。
 
-Parameters は、以下を入力してください。
-
-* **Directory Name**: data/input
-
-> 前章の [Fileコンポーネント]({{ HOSTNAME_SUFFIX }}/workshop/camel-k/lab/file-component) で `data/input` フォルダを作成していない場合は、ワークスペースのルートフォルダ直下に、`data` フォルダを作成し、さらにdata フォルダの配下に、`input` フォルダを作成してください。
+続いて、`Kamelets` タブから `Kafka Sink` を探して選択をしてください。
+右上のテキストボックスに `Kafka Sink` と入力をすると、絞り込みができます。
 
 ![](images/07-kafka-021.png)
-![karavan]({% image_path 07-kafka-021.png %}){:width="800px"}
+![karavan]({% image_path 07-kafka-021.png %}){:width="600px"}
 
-最後に、テスト用のCSVファイルを作成します。
-左のエクスプローラー上で、右クリックをして、メニューから `新しいファイル` を選択し、`kafka-test.txt` を作成します。
+これで、`Split` と `Log` の間に、`Kafka Sink` が追加されました。
 
-ファイルの中身は、`kafka sink test` としてください。
+`Kafka Sink` のシンボルをクリックすると、右側にプロパティが表示されますので、
+Parameters 項目に、以下の内容を設定してください。
+他の項目は、デフォルトのままで構いません。
 
+* **Topic Names**: RHOSAK で作成した Kafka トピック名
+* **Bootstrap Servers**: RHOSAK で作成した Kafka インスタンスの Bootstrap Servers
+* **Username**: 作成した Service Account の ID
+* **Password**: 作成した Service Account の Secret
 
+![](images/07-kafka-022.png)
+![karavan]({% image_path 07-kafka-022.png %}){:width="800px"}
 
+最後に、テスト用のCSVファイルを用意します。
+[DataFormatsパターン]({{ HOSTNAME_SUFFIX }}/workshop/camel-k/lab/data-formats) の章で作成した `test.csv` を使用します。
+ファイルが無い場合は、左のエクスプローラー上で、右クリックをして、メニューから `新しいファイル` を選択し、`test.csv` を作成します。
 
+ファイルの中身は、
 
+<pre>
+  id,name
+  1,apple
+  2,orange
+  3,lemon
+</pre>
+
+としてください。
+
+それでは、実際に動かしてみます。
+
+右上の **▷** の実行ボタンを押してください。
+（もしくは、左のエクスプローラでファイル名を右クリックして、`Karavan: Run File` を選択してください）
+
+ターミナルが開き、作成したインテグレーションが JBang を通して実行されます。
+Kafka に接続ができていれば、ターミナルに以下の様に表示されているはずです。
+
+![](images/07-kafka-023.png)
+![karavan]({% image_path 07-kafka-023.png %}){:width="800px"}
+
+特にエラーなく実行されたら、`test.csv` を `data/input` フォルダに移動して格納をしてください。
+ファイル格納後、以下の様な Log が表示されていればOKです。
+
+![](images/07-kafka-024.png)
+![karavan]({% image_path 07-kafka-024.png %}){:width="800px"}
+
+では、実際に送信されているかどうかを確認してみましょう。
+[console.redhat.com](https://console.redhat.com/) に戻り、作成した Kafka インスタンスのページを開きます。
+
+`Topics` のタブを選択し、作成したトピック名をクリックしてください。
+
+![](images/07-kafka-025.png)
+![karavan]({% image_path 07-kafka-025.png %}){:width="800px"}
+
+次に、トピックの詳細ページで `Messages` のタブを選択すると、送信したメッセージが確認できます。
+
+![](images/07-kafka-026.png)
+![karavan]({% image_path 07-kafka-026.png %}){:width="800px"}
+
+メッセージの確認ができたら、処理を停止してください。
