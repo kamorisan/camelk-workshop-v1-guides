@@ -21,7 +21,7 @@
 VSCODE のダウンロードについては 下記の URL へアクセスをして、右上の `Download` のリンクをクリックして、対応するOSを選択して実施をしてください。
 （ここでは、インストールの詳細については割愛します）
 
-* [https://code.visualstudio.com/]
+* https://code.visualstudio.com/
 
 ### Karavan Designer
 
@@ -60,4 +60,4 @@ code .
 JBang のインストールについては、下記のリンクを参考にしてください。
 （ここでは、インストールの詳細については割愛します）
 
-* [https://www.jbang.dev/documentation/guide/latest/installation.html]
+* https://www.jbang.dev/documentation/guide/latest/installation.html

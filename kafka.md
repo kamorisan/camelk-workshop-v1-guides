@@ -150,8 +150,8 @@ Kafka インスタンスと Service Account を作成したら、Kafka トピッ
 
 少し長くなりましたが、RHOSAK で Kafka を使用する準備ができましたので、まずは Kafka にメッセージを送信する処理を作成していきます。
 
-ここでは、[Split パターン]({{ HOSTNAME_SUFFIX }}/workshop/camel-k/lab/file-component)で作成したインテグレーションに、Kafkaトピックへのメッセージの送信処理を追加していきます。
-まだ [Split パターン]({{ HOSTNAME_SUFFIX }}/workshop/camel-k/lab/file-component) を実施していない場合は、そちらを先に実施してください。
+ここでは、[Split パターン]({{ HOSTNAME_SUFFIX }}/workshop/camel-k/lab/split-eip)で作成したインテグレーションに、Kafkaトピックへのメッセージの送信処理を追加していきます。
+まだ [Split パターン]({{ HOSTNAME_SUFFIX }}/workshop/camel-k/lab/split-eip) を実施していない場合は、そちらを先に実施してください。
 
 VSCODE に戻り、左のエクスプローラー上で、`split.yam` を複製し、任意のファイル名に変更してください。（ここでは、kafka-sink.yaml としておきます）
 
