@@ -3,10 +3,10 @@
 
 ### 1. 目的
 
-Kamelet の Kafka Sink, Kafka Source を使用して、Camel K と Kafka との連携の方法について理解していただきます。
+Kamelet の **Kafka Sink**, **Kafka Source** を使用して、Camel K と Kafka との連携の方法について理解していただきます。
 
-* [Kafka Sink](https://camel.apache.org/camel-kamelets/0.9.x/kafka-sink.html)
-* [Kafka Source](https://camel.apache.org/camel-kamelets/0.9.x/kafka-source.html)
+* [Kafka Sink](https://camel.apache.org/camel-kamelets/{{ KAMELETS_VERSION }}/kafka-sink.html)
+* [Kafka Source](https://camel.apache.org/camel-kamelets/{{ KAMELETS_VERSION }}/kafka-source.html)
 
 ### 2. Red Hat OpenShift Streams for Apache Kafka　(RHOSAK) の準備
 
@@ -22,7 +22,7 @@ RHOSAK を使用すると、Kafkaの環境を自分で構築・運用するこ�
 その際は、`Account Type: Personal` を選択してください。
 
 ![](images/07-kafka-001.png)
-![karavan]({% image_path 07-kafka-001.png %}){:width="800px"}
+![karavan]({% image_path 07-kafka-001.png %}){:width="300px"}
 
 ログインすると、左のメニューから、`Application and Data Services` -> `Streams for Apache Kafka` -> `Kafka Instance` を選択します。
 
@@ -32,12 +32,14 @@ RHOSAK を使用すると、Kafkaの環境を自分で構築・運用するこ�
 Kafka Instances のページで、`[Create Kafka instance]` をクリックします。
 
 ![](images/07-kafka-003.png)
+![karavan]({% image_path 07-kafka-003.png %}){:width="600px"}
 
 Create a Kafka instance のページに移動するので、`Name` に任意のクラスターの名前を入力してください。
 
 他の項目はこのままで、一番下にスクロールして `[Create instance]` をクリックします。
 
 ![](images/07-kafka-004.png)
+![karavan]({% image_path 07-kafka-004.png %}){:width="800px"}
 
 作成した Kafka インスタンスがリストに表示されます。しばらくすると、インスタンスの Status が `Ready` になるので待ちましょう。
 

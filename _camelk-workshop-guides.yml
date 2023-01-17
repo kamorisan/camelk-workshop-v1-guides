@@ -10,6 +10,7 @@ vars:
   MASTER_URL:
   CONSOLE_URL:
   CAMEL_VERSION:
+  KAMELETS_VERSION:
 
 modules:
   activate:
