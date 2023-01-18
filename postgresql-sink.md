@@ -60,4 +60,4 @@ Parameters は、以下のように設定をします。
 * **Repeat Count**: 1
 
 ![](images/08-postgresql-003.png)
-![karavan]({% image_path 08-postgresql-001.png %}){:width="800px"}
+![karavan]({% image_path 08-postgresql-003.png %}){:width="800px"}
