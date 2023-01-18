@@ -104,3 +104,9 @@ Hello World の文字列が、約1秒間隔に5回表示されることを確認
 ></pre>
 
 *`"-Dcamel.jbang.version=3.18.3"`* のように、ダブルクォーテーションを使う必要があります。
+
+---
+
+###　参考リンク
+
+* [Red Hat Integration - Kamelets リファレンス](https://access.redhat.com/documentation/ja-jp/red_hat_integration/2022.q4/html/kamelets_reference/postgres-sql-sink)

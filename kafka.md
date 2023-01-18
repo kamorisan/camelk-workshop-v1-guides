@@ -282,3 +282,9 @@ Kafka トピックにアクセスできていれば、メッセージを受信�
 ![karavan]({% image_path 07-kafka-030.png %}){:width="800px"}
 
 メッセージの確認ができたら、処理を停止してください。
+
+---
+
+### 参考リンク
+
+* [Red Hat Integration - Kamelets リファレンス](https://access.redhat.com/documentation/ja-jp/red_hat_integration/2022.q4/html/kamelets_reference/kafka-sink)
